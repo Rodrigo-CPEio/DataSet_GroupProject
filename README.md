@@ -12,16 +12,16 @@ O trabalho está dividido em três componentes principais:
 2. **Modelagem de Machine Learning (60%)** 
 3. **Escrita de Artigo Científico** 
 
-## 🗂️ Dataset: [Nome do seu Dataset]
-* **Domínio:** [Ex: Tecnologia / Stack Overflow Survey] [cite: 27]
+## 🗂️ Dataset: [survey_results_public.csv]
+* **Domínio:** [Ex: Tecnologia / Stack Overflow Survey]
 * **Localização:** Os dados originais encontram-se na pasta `/DATASET`
 * **Características:** O conjunto de dados possui aproximadamente 152 MB, gerido via **Git LFS** devido às restrições de tamanho do GitHub.
-* **Entidades:** [Ex: Respostas de desenvolvedores sobre carreira e tecnologias] [cite: 27]
+* **Entidades:** [Ex: Respostas de desenvolvedores sobre carreira e tecnologias]
 
 ## 🛠️ Tecnologias Utilizadas
-* **Linguagem:** Python [cite: 13]
-* **Bibliotecas Previstas:** Pandas, NumPy (Estatística), Scikit-Learn (ML), Matplotlib/Seaborn (Gráficos) [cite: 13, 29, 32]
-* **Interface:** Dashboard dinâmico para representação de resultados [cite: 36, 38]
+* **Linguagem:** Python 
+* **Bibliotecas Previstas:** Pandas, NumPy (Estatística), Scikit-Learn (ML), Matplotlib/Seaborn (Gráficos)
+* **Interface:** Dashboard dinâmico para representação de resultados
 
 ## 🚀 Como Executar o Projeto
 1. **Clonar o repositório:**
