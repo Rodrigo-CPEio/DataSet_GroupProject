@@ -1,0 +1,19 @@
+/* charts.css */
+.charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajuste automático */
+    gap: 25px;
+}
+
+.chart-box {
+    background: linear-gradient(135deg, #0B1748, #131F5F);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+}
+
+canvas {
+    width: 100%;      /* Que ocupe todo el ancho del chart-box */
+    max-height: 280px;
+    display: block;
+}

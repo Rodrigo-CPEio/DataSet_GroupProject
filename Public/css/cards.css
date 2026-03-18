@@ -1,0 +1,46 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: linear-gradient(135deg, #0B1748, #131F5F);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+    transition: transform var(--transition-fast);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 14px;
+    color: var(--color-grey-medium);
+    margin-bottom: 12px;
+}
+
+.card h1 {
+    font-size: 28px;
+}
+
+/* charts.css */
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+}
+
+.chart-box {
+    background: linear-gradient(135deg, #0B1748, #131F5F);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+}
+
+canvas {
+    max-height: 280px;
+}

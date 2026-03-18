@@ -1,0 +1,23 @@
+/* root.css*/
+:root {
+    /* Neutros */
+    --color-bg-dark: #050C26;
+    --color-bg-sidebar: #07113A;
+    --color-bg-card: #0B1748;
+    --color-grey-light: #AEB9E1;
+    --color-grey-medium: #7E89AC;
+    --color-white: #FFFFFF;
+
+    /* Accentos */
+    --color-green: #14CA74;
+    --color-red: #FF5A65;
+    --color-cyan: #00C2FF;
+    --color-purple: #CB3CFF;
+
+    /* Tipografía */
+    --font-family-base: 'Segoe UI', Arial, sans-serif;
+
+    /* Sombra y transiciones */
+    --shadow-card: rgba(0,0,0,0.3) 0px 4px 12px;
+    --transition-fast: 0.3s ease;
+}

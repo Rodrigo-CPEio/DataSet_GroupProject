@@ -1,0 +1,25 @@
+.main {
+    margin-left: 260px; /* Empuja main a la derecha del sidebar */
+    height: 100vh;
+    overflow-y: auto;
+    padding: 25px 40px;
+    box-sizing: border-box;
+}
+
+/* Ocultar scrollbar */
+.main::-webkit-scrollbar {
+    width: 0px;
+}
+.main {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* header.css */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
