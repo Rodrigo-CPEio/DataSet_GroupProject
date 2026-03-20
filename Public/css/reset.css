@@ -11,3 +11,74 @@ body {
     background: var(--color-bg-dark);
     color: var(--color-white);
 }
+
+/* MODO LIGHT */
+body.light-mode {
+    --color-bg-dark: var(--color-bg-sidebar-light);
+    --color-bg-sidebar: var(--color-bg-light);
+    --color-bg-card: var(--color-bg-card-light);
+    --color-grey-light: var(--color-grey-light-light);
+    --color-white: var(--color-black-light);
+}
+
+/* SIDEBAR TEXT EN LIGHT */
+body.light-mode .sidebar ul.menu li {
+    color: var(--color-black-light);
+}
+
+/* TOPBAR SUBTEXT EN LIGHT */
+body.light-mode .topbar-text span {
+    color: var(--color-black-light);
+}
+
+body.light-mode .sidebar ul.menu li:hover {
+    color: white;
+}
+
+
+
+body.light-mode .card {
+    background: var(--color-bg-card-light);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+
+/* CARD 1 - BLUE */
+body.light-mode .card:nth-child(1) {
+    background: var(--color-bg-card-blue);
+    color: var(--color-card-blue);
+}
+
+/* CARD 2 - GREEN */
+body.light-mode .card:nth-child(2) {
+    background: var(--color-bg-card-green);
+    color: var(--color-card-green);
+}
+
+/* CARD 3 - PURPLE */
+body.light-mode .card:nth-child(3) {
+    background: var(--color-bg-card-purple);
+    color: var(--color-card-purple);
+}
+
+/* CARD 4 - ORANGE */
+body.light-mode .card:nth-child(4) {
+    background: var(--color-bg-card-orange);
+    color: var(--color-card-orange);
+}
+
+
+body.light-mode .card h3 {
+    color: inherit;
+    opacity: 0.7;
+}
+
+body.light-mode .card h1 {
+    color: inherit;
+}
+
+body.light-mode .chart-box {
+    background: var(--color-bg-card-light);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}

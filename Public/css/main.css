@@ -1,11 +1,12 @@
 .main {
-    margin-left: 260px; /* Empuja main a la derecha del sidebar */
+    margin-left: 260px;
     height: 100vh;
     overflow-y: auto;
-    padding: 25px 40px;
     box-sizing: border-box;
-}
 
+    display: flex;
+    flex-direction: column;
+}
 /* Ocultar scrollbar */
 .main::-webkit-scrollbar {
     width: 0px;
@@ -22,4 +23,18 @@
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 20px;
+}
+
+.main-content {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content {
+    padding: 25px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }

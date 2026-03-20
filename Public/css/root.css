@@ -1,12 +1,27 @@
 /* root.css*/
 :root {
-    /* Neutros */
+    /* Neutros dark*/
     --color-bg-dark: #050C26;
     --color-bg-sidebar: #07113A;
     --color-bg-card: #0B1748;
     --color-grey-light: #AEB9E1;
     --color-grey-medium: #7E89AC;
     --color-white: #FFFFFF;
+
+    /* Neutros  light*/
+    --color-bg-light: #FFFFFF;
+    --color-bg-sidebar-light: #F9FAFB;
+    --color-bg-card-light: #FFFFFF;
+    --color-bg-card-blue: #E5F0FF;
+    --color-bg-card-green: #E8FCEE;
+    --color-bg-card-purple: #f4ebff;
+    --color-bg-card-orange: #fff7d7;
+    --color-card-blue:#1c398e;
+    --color-card-green:#0d542b;
+    --color-card-purple:#59168b;
+    --color-card-orange:#7b3306;
+    --color-grey-light-light: #E0E4F1;
+    --color-black-light: #333333;
 
     /* Accentos */
     --color-green: #14CA74;
