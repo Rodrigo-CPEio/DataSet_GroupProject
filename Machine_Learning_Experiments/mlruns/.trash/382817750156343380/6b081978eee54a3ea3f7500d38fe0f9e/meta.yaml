@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/DataSet_GroupProject/Machine_Learning_Experiments/mlruns/382817750156343380/6b081978eee54a3ea3f7500d38fe0f9e/artifacts
+deleted_time: 1779234292958
+end_time: 1779233035075
+entry_point_name: ''
+experiment_id: '382817750156343380'
+lifecycle_stage: deleted
+run_id: 6b081978eee54a3ea3f7500d38fe0f9e
+run_name: MLP learning_rate=0.01
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779232895673
+status: 3
+tags: []
+user_id: marco

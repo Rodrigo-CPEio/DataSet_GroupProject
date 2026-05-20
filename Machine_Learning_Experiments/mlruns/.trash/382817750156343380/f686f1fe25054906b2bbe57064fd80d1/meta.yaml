@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/DataSet_GroupProject/Machine_Learning_Experiments/mlruns/382817750156343380/f686f1fe25054906b2bbe57064fd80d1/artifacts
+deleted_time: 1779234292927
+end_time: 1779232080830
+entry_point_name: ''
+experiment_id: '382817750156343380'
+lifecycle_stage: deleted
+run_id: f686f1fe25054906b2bbe57064fd80d1
+run_name: Large MLP - possible overfitting
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779226890623
+status: 3
+tags: []
+user_id: marco

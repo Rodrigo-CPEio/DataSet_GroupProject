@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/DataSet_GroupProject/Machine_Learning_Experiments/mlruns/878865244113623260/7d6d22e1d11948afb4be3be8f47e0d36/artifacts
+end_time: 1779234643364
+entry_point_name: ''
+experiment_id: '878865244113623260'
+lifecycle_stage: active
+run_id: 7d6d22e1d11948afb4be3be8f47e0d36
+run_name: Perceptron baseline
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779234642995
+status: 3
+tags: []
+user_id: marco

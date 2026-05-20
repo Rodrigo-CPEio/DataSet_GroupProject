@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/DataSet_GroupProject/Machine_Learning_Experiments/mlruns/382817750156343380/3a1f49a0966b43a7a142a7fd36fa44cb/artifacts
+deleted_time: 1779234292917
+end_time: 1779226890612
+entry_point_name: ''
+experiment_id: '382817750156343380'
+lifecycle_stage: deleted
+run_id: 3a1f49a0966b43a7a142a7fd36fa44cb
+run_name: Medium MLP
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779226418152
+status: 3
+tags: []
+user_id: marco

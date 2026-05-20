@@ -1,0 +1,8 @@
+artifact_location: file:///c:/DataSet_GroupProject/Machine_Learning_Experiments/mlruns/537162982904377793
+creation_time: 1779225846965
+experiment_id: '537162982904377793'
+last_update_time: 1779234310822
+lifecycle_stage: deleted
+name: JobSat Classification - Perceptron vs Logistic Regression
+tags: {}
+workspace: default

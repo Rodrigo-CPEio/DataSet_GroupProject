@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/DataSet_GroupProject/Machine_Learning_Experiments/mlruns/838289039532266216/de815bc868af4ede92c6f2196abc4edf/artifacts
+end_time: 1779239193136
+entry_point_name: ''
+experiment_id: '838289039532266216'
+lifecycle_stage: active
+run_id: de815bc868af4ede92c6f2196abc4edf
+run_name: Large MLP - possible overfitting
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779235120981
+status: 3
+tags: []
+user_id: marco
