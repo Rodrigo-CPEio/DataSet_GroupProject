@@ -103,6 +103,31 @@ document.addEventListener('DOMContentLoaded', carregarRecomendacoesDoAlgoritmo);
 // Garante que a função corre assim que a página carrega
 document.addEventListener('DOMContentLoaded', carregarRecomendacoesDoAlgoritmo);
 
+function carregarHeatmapRecrutador() {
+    const chartImg = document.getElementById('heatmapRecrutador');
+    if (!chartImg) return;
+
+    // Chama o teu endpoint que executa o Python e gera o PNG
+    fetch('/recruiter/recomendar-candidatos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tecnologias: "Python,Docker,PostgreSQL" }) // ajusta conforme necessário
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Força reload da imagem sem cache
+            chartImg.src = '/recruiter/notebooks-files/matriz_compatibilidade.png?t=' + new Date().getTime();
+            chartImg.style.display = 'block';
+        }
+    })
+    .catch(error => {
+        console.error("Erro ao gerar heatmap:", error);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', carregarHeatmapRecrutador);
+
 // ── Restaura tema ao carregar página ─────────────────────────────────────────
 (function () {
   if (localStorage.getItem('theme') === 'light') {
