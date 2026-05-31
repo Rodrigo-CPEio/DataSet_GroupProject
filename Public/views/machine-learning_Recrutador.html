@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Dashdark — Career Paths</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <div class="sidebar" id="sidebar">
+
+        <h2 class="logo">Recrutador</h2>
+
+        <ul class="menu">
+            <li data-section="overview"        onclick="setActive(this); location.href='/recrutador'">
+                <i class="fa-solid fa-bars-staggered"></i> <span>Overview</span>
+            </li>
+            <li data-section="tech-trends"     onclick="setActive(this); location.href='/recrutador/tech-trends_Recrutador'">
+                <i class="fa-solid fa-arrow-trend-up"></i> <span>Tech Trends</span>
+            </li>
+            <li data-section="career-paths" onclick="setActive(this); location.href='/recrutador/career-paths_Recrutador'">
+                <i class="fa-solid fa-briefcase"></i> <span>Career Paths</span>
+            </li>
+            <li data-section="ai-tools"        onclick="setActive(this); location.href='/recrutador/ai-tools_Recrutador'">
+                <i class="fa-solid fa-robot"></i> <span>AI & Tools</span>
+            </li>
+            <li data-section="learning"        onclick="setActive(this); location.href='/recrutador/learning_Recrutador'">
+                <i class="fa-solid fa-graduation-cap"></i> <span>Learning</span>
+            </li>
+            <li data-section="salary-explorer" onclick="setActive(this); location.href='/recrutador/salary-explorer_Recrutador'">
+                <i class="fa-solid fa-dollar-sign"></i> <span>Salary Explorer</span>
+            </li>
+            <li data-section="demographics"    onclick="setActive(this); location.href='/recrutador/demographics_Recrutador'">
+                <i class="fa-solid fa-user-group"></i> <span>Demographics</span>
+            </li>
+            <li data-section="machine-learning" class="active" onclick="setActive(this); location.href='/recrutador/machine-learning_Recrutador'">
+                <i class="fa-solid fa-user-group"></i> <span>Machine Learning</span>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <div class="main">
+
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="topbar-text">
+                <strong>Stack Overflow Developer Survey 2024</strong>
+                <span>Dashboard de Análise de Recrutadores</span>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i id="themeIcon" class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <header class="header">
+                <h2>Machine Learning</h2>
+                <div class="page-subtitle">Entendendo a aplicação de técnicas de machine learning no mercado de trabalho</div>
+            </header>
+
+            <section class="prediction-panel">
+                <div class="prediction-copy">
+                    <h3>Previsao de Satisfacao no Trabalho</h3>
+                    <p>Modelo usado: Stacking Classifier, o melhor algoritmo identificado nos testes.</p>
+                </div>
+
+                <form id="jobsatPredictionForm" class="prediction-form">
+                    <label>
+                        Experiencia Profissional em Programacao
+                        <span class="field-hint">Anos a programar profissionalmente</span>
+                        <input type="number" name="YearsCodePro_Num" min="0" max="51" step="1" value="5" required>
+                    </label>
+
+                    <label>
+                        Experiencia Total de Trabalho
+                        <span class="field-hint">Total de anos de experiencia profissional</span>
+                        <input type="number" name="WorkExp" min="0" max="60" step="1" value="5" required>
+                    </label>
+
+                    <label>
+                        Faixa Etaria
+                        <span class="field-hint">Idade atual do trabalhador</span>
+                        <select name="Age_Code" required>
+                            <option value="1">&lt;18</option>
+                            <option value="2" selected>18-24</option>
+                            <option value="3">25-34</option>
+                            <option value="4">35-44</option>
+                            <option value="5">45-54</option>
+                            <option value="6">55-64</option>
+                            <option value="7">65+</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Pontos: Estrategia da Equipa
+                        <span class="field-hint">Importancia de participar na estrategia da equipa</span>
+                        <input type="number" name="JobSatPoints_1" min="0" max="100" step="0.1" value="0" required>
+                    </label>
+
+                    <label>
+                        Pontos: Open Source
+                        <span class="field-hint">Importancia de contribuir para projetos open source</span>
+                        <input type="number" name="JobSatPoints_4" min="0" max="100" step="0.1" value="0" required>
+                    </label>
+
+                    <label>
+                        Pontos: Seguranca
+                        <span class="field-hint">Importancia de proteger dados e ambientes</span>
+                        <input type="number" name="JobSatPoints_5" min="0" max="100" step="0.1" value="0" required>
+                    </label>
+
+                    <button type="submit">Prever</button>
+                </form>
+
+                <div id="jobsatPredictionResult" class="prediction-result">
+                    Introduz os valores e clica em Predict para ver a classe prevista.
+                </div>
+            </section>
+
+            <section class="prediction-panel">
+                <div class="prediction-copy">
+                    <h3>Previsao de Salario Anual</h3>
+                    <p>Modelo usado: Linear Regression, o melhor modelo de regressao identificado nos testes. A previsao e aproximada.</p>
+                </div>
+
+                <form id="salaryPredictionForm" class="prediction-form prediction-form--compact">
+                    <label>
+                        Experiencia Profissional em Programacao
+                        <span class="field-hint">Anos a programar profissionalmente</span>
+                        <input type="number" name="YearsCodePro_Num" min="0" max="51" step="1" value="5" required>
+                    </label>
+
+                    <label>
+                        Experiencia Total de Trabalho
+                        <span class="field-hint">Total de anos de experiencia profissional</span>
+                        <input type="number" name="WorkExp" min="0" max="60" step="1" value="5" required>
+                    </label>
+
+                    <label>
+                        Faixa Etaria
+                        <span class="field-hint">Idade atual do trabalhador</span>
+                        <select name="Age_Code" required>
+                            <option value="1">&lt;18</option>
+                            <option value="2" selected>18-24</option>
+                            <option value="3">25-34</option>
+                            <option value="4">35-44</option>
+                            <option value="5">45-54</option>
+                            <option value="6">55-64</option>
+                            <option value="7">65+</option>
+                        </select>
+                    </label>
+
+                    <button type="submit">Prever Salario</button>
+                </form>
+
+                <div id="salaryPredictionResult" class="prediction-result">
+                    Introduz os valores e clica em Prever Salario para ver a estimativa.
+                </div>
+            </section>
+
+            <section class="prediction-panel">
+                <div class="prediction-copy">
+                    <h3>Previsao de Salario por Linguagem</h3>
+                    <p>Modelo usado: Linear Regression com linguagem principal e experiencia. A previsao e exploratoria porque salario depende tambem de pais, cargo, empresa e senioridade.</p>
+                </div>
+
+                <form id="languageSalaryPredictionForm" class="prediction-form prediction-form--compact">
+                    <label>
+                        Linguagem de Programacao
+                        <span class="field-hint">Linguagem usada pelo developer</span>
+                        <select name="Language" required>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="HTML/CSS">HTML/CSS</option>
+                            <option value="Python" selected>Python</option>
+                            <option value="SQL">SQL</option>
+                            <option value="TypeScript">TypeScript</option>
+                            <option value="Bash/Shell (all shells)">Bash/Shell</option>
+                            <option value="Java">Java</option>
+                            <option value="C#">C#</option>
+                            <option value="C++">C++</option>
+                            <option value="C">C</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Go">Go</option>
+                            <option value="Rust">Rust</option>
+                            <option value="Kotlin">Kotlin</option>
+                            <option value="Dart">Dart</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Experiencia Profissional em Programacao
+                        <span class="field-hint">Anos a programar profissionalmente</span>
+                        <input type="number" name="YearsCodePro_Num" min="0" max="51" step="1" value="5" required>
+                    </label>
+
+                    <label>
+                        Experiencia Total de Trabalho
+                        <span class="field-hint">Total de anos de experiencia profissional</span>
+                        <input type="number" name="WorkExp" min="0" max="60" step="1" value="5" required>
+                    </label>
+
+                    <label>
+                        Faixa Etaria
+                        <span class="field-hint">Idade atual do trabalhador</span>
+                        <select name="Age_Code" required>
+                            <option value="1">&lt;18</option>
+                            <option value="2" selected>18-24</option>
+                            <option value="3">25-34</option>
+                            <option value="4">35-44</option>
+                            <option value="5">45-54</option>
+                            <option value="6">55-64</option>
+                            <option value="7">65+</option>
+                        </select>
+                    </label>
+
+                    <button type="submit">Prever Salario por Linguagem</button>
+                </form>
+
+                <div id="languageSalaryPredictionResult" class="prediction-result">
+                    Escolhe a linguagem e a experiencia para ver a estimativa.
+                </div>
+            </section>
+
+            <!-- ---- CHARTS ---- -->
+            <section class="charts">
+
+                
+
+                <div class="chart-box chart-box--wide">
+                    <h3>Tipos de Developer Mais Comuns</h3>
+                    <iframe src="/assets/g14_devtypes.html"
+                        style="width:100%; height:420px; border:none; border-radius:12px;">
+                    </iframe>
+                </div>
+                </div>
+                
+            </section>
+
+        </div>
+
+    </div>
+
+    <script>
+        const predictionForm = document.getElementById('jobsatPredictionForm');
+        const predictionResult = document.getElementById('jobsatPredictionResult');
+        const salaryForm = document.getElementById('salaryPredictionForm');
+        const salaryResult = document.getElementById('salaryPredictionResult');
+        const languageSalaryForm = document.getElementById('languageSalaryPredictionForm');
+        const languageSalaryResult = document.getElementById('languageSalaryPredictionResult');
+
+        predictionForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            predictionResult.classList.remove('error');
+
+            const payload = Object.fromEntries(new FormData(predictionForm).entries());
+            const pointsTotal = [
+                'JobSatPoints_1',
+                'JobSatPoints_4',
+                'JobSatPoints_5',
+            ].reduce((total, field) => total + Number(payload[field] || 0), 0);
+
+            if (pointsTotal > 100) {
+                predictionResult.classList.add('error');
+                predictionResult.textContent = 'Erro: a soma dos pontos de satisfacao nao pode ultrapassar 100.';
+                return;
+            }
+
+            predictionResult.textContent = 'A calcular previsao...';
+
+            try {
+                const response = await fetch('/recrutador/api/predict-jobsat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.details || data.error || 'Erro na previsao.');
+                }
+
+                predictionResult.innerHTML = `
+                    <span>Classe prevista</span>
+                    <strong>${data.prediction}</strong>
+                `;
+            } catch (error) {
+                predictionResult.classList.add('error');
+                predictionResult.textContent = `Erro: ${error.message}`;
+            }
+        });
+
+        salaryForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            salaryResult.textContent = 'A calcular previsao...';
+            salaryResult.classList.remove('error');
+
+            const payload = Object.fromEntries(new FormData(salaryForm).entries());
+
+            try {
+                const response = await fetch('/recrutador/api/predict-salary', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.details || data.error || 'Erro na previsao.');
+                }
+
+                const formattedSalary = Number(data.prediction).toLocaleString('pt-PT', {
+                    style: 'currency',
+                    currency: 'USD',
+                    maximumFractionDigits: 0,
+                });
+
+                salaryResult.innerHTML = `
+                    <span>Salario anual estimado</span>
+                    <strong>${formattedSalary}</strong>
+                    <small>Modelo com R2 aproximado de ${Number(data.metrics.r2).toFixed(3)}; usar como estimativa exploratoria.</small>
+                `;
+            } catch (error) {
+                salaryResult.classList.add('error');
+                salaryResult.textContent = `Erro: ${error.message}`;
+            }
+        });
+
+        languageSalaryForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            languageSalaryResult.textContent = 'A calcular previsao...';
+            languageSalaryResult.classList.remove('error');
+
+            const payload = Object.fromEntries(new FormData(languageSalaryForm).entries());
+
+            try {
+                const response = await fetch('/recrutador/api/predict-salary-language', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.details || data.error || 'Erro na previsao.');
+                }
+
+                const formattedSalary = Number(data.prediction).toLocaleString('pt-PT', {
+                    style: 'currency',
+                    currency: 'USD',
+                    maximumFractionDigits: 0,
+                });
+
+                languageSalaryResult.innerHTML = `
+                    <span>Salario anual estimado para ${data.features.Language}</span>
+                    <strong>${formattedSalary}</strong>
+                    <small>Modelo com R2 aproximado de ${Number(data.metrics.r2).toFixed(3)}; resultado apenas exploratorio.</small>
+                `;
+            } catch (error) {
+                languageSalaryResult.classList.add('error');
+                languageSalaryResult.textContent = `Erro: ${error.message}`;
+            }
+        });
+    </script>
+    <script src="/js/script.js"></script>
+
+</body>
+</html>
