@@ -17,6 +17,7 @@ router.get('/learning_Recrutador',        (req, res) => res.sendFile(path.join(v
 router.get('/salary-explorer_Recrutador', (req, res) => res.sendFile(path.join(views, 'salary-explorer_Recrutador.html')));
 router.get('/demographics_Recrutador',    (req, res) => res.sendFile(path.join(views, 'demographics_Recrutador.html')));
 router.get('/machine-learning_Recrutador', (req, res) => res.sendFile(path.join(views, 'machine-learning_Recrutador.html')));
+router.get('/recommendation', (req, res) => res.sendFile(path.join(views, 'recommendation_Recrutador.html')))
 
 router.post('/api/predict-jobsat', (req, res) => {
   const input = {
