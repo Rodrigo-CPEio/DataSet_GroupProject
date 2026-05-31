@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Recommendation - Dashboard Programador</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+
+        <h2 class="logo">Programador</h2>
+
+        <ul class="menu">
+            <li data-section="overview" onclick="setActive(this); location.href='/developer'">
+                <i class="fa-solid fa-bars-staggered"></i> <span>Overview</span>
+            </li>
+            <li data-section="tech-trends" onclick="setActive(this); location.href='/developer/tech-trends'">
+                <i class="fa-solid fa-arrow-trend-up"></i> <span>Tech Trends</span>
+            </li>
+            <li data-section="career-paths" onclick="setActive(this); location.href='/developer/career-paths'">
+                <i class="fa-solid fa-briefcase"></i> <span>Career Paths</span>
+            </li>
+            <li data-section="ai-tools" onclick="setActive(this); location.href='/developer/ai-tools'">
+                <i class="fa-solid fa-robot"></i> <span>AI & Tools</span>
+            </li>
+            <li data-section="learning" onclick="setActive(this); location.href='/developer/learning'">
+                <i class="fa-solid fa-graduation-cap"></i> <span>Learning</span>
+            </li>
+            <li data-section="salary-explorer" onclick="setActive(this); location.href='/developer/salary-explorer'">
+                <i class="fa-solid fa-dollar-sign"></i> <span>Salary Explorer</span>
+            </li>
+            <li data-section="demographics" onclick="setActive(this); location.href='/developer/demographics'">
+                <i class="fa-solid fa-user-group"></i> <span>Demographics</span>
+            </li>
+            <li data-section="recommendation" class="active" onclick="setActive(this); location.href='/developer/recommendation'">
+                <i class="fa-solid fa-magnifying-glass"></i> <span>Recommendation</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+        <div class="topbar">
+            <div class="topbar-text">
+                <strong>Stack Overflow Developer Survey 2024</strong>
+                <span>Dashboard de Análise de Programadores</span>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i id="themeIcon" class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+        <div class="content">
+
+            <header class="header">
+                <h2>Recommendation</h2>
+            </header>
+
+            <p style="color: var(--text-muted, #8899aa); font-size: 0.92rem; margin-bottom: 28px; line-height: 1.6;">
+                O sistema analisa o teu perfil de linguagens e compara-o com os <strong style="color: #f8fafc;">5000 developers</strong> mais similares do Stack Overflow Survey 2024. Com base nessa comparação, recomenda as linguagens que mais developers com o teu perfil também dominam — ajudando-te a decidir o próximo passo na tua stack.
+            </p>
+
+            <div class="chart-box">
+                <h3>Language Recommendation Insights</h3>
+                <iframe src="/assets/recommendation_system.html"
+                        style="width:100%; height:500px; border:none; border-radius:12px;">
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>
