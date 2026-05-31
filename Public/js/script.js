@@ -145,19 +145,20 @@ const showChartBtn = document.getElementById('showChartBtn');
 const chartModal = document.getElementById('chartModal');
 const closeChart = document.getElementById('closeChart');
 
-showChartBtn.addEventListener('click', () => {
-    chartModal.style.display = 'block';
-});
+if (showChartBtn && chartModal && closeChart) {
+    showChartBtn.addEventListener('click', () => {
+        chartModal.style.display = 'block';
+    });
 
-closeChart.addEventListener('click', () => {
-    chartModal.style.display = 'none';
-});
-
-// Cerrar modal al hacer clic fuera
-window.addEventListener('click', (e) => {
-    if(e.target === chartModal){
+    closeChart.addEventListener('click', () => {
         chartModal.style.display = 'none';
-    }
-}
+    });
 
-);
+    // Cerrar modal al hacer clic fuera
+    window.addEventListener('click', (e) => {
+        if(e.target === chartModal){
+            chartModal.style.display = 'none';
+        }
+    }
+    );
+}
