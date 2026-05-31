@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Recommendation - Dashboard Recrutador</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .rec-intro {
+            color: var(--text-muted, #8899aa);
+            font-size: 0.92rem;
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .heatmap-wrapper {
+            background: var(--card-bg, rgba(255,255,255,0.04));
+            border-radius: 16px;
+            padding: 28px;
+            border: 1px solid var(--border, rgba(255,255,255,0.08));
+            min-height: 360px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <div class="sidebar" id="sidebar">
+
+        <h2 class="logo">Recrutador</h2>
+
+        <ul class="menu">
+            <li data-section="overview" onclick="setActive(this); location.href='/recrutador'">
+                <i class="fa-solid fa-bars-staggered"></i> <span>Overview</span>
+            </li>
+            <li data-section="tech-trends" onclick="setActive(this); location.href='/recrutador/tech-trends_Recrutador'">
+                <i class="fa-solid fa-arrow-trend-up"></i> <span>Tech Trends</span>
+            </li>
+            <li data-section="career-paths" onclick="setActive(this); location.href='/recrutador/career-paths_Recrutador'">
+                <i class="fa-solid fa-briefcase"></i> <span>Career Paths</span>
+            </li>
+            <li data-section="ai-tools" onclick="setActive(this); location.href='/recrutador/ai-tools_Recrutador'">
+                <i class="fa-solid fa-robot"></i> <span>AI & Tools</span>
+            </li>
+            <li data-section="learning" onclick="setActive(this); location.href='/recrutador/learning_Recrutador'">
+                <i class="fa-solid fa-graduation-cap"></i> <span>Learning</span>
+            </li>
+            <li data-section="salary-explorer" onclick="setActive(this); location.href='/recrutador/salary-explorer_Recrutador'">
+                <i class="fa-solid fa-dollar-sign"></i> <span>Salary Explorer</span>
+            </li>
+            <li data-section="demographics" onclick="setActive(this); location.href='/recrutador/demographics_Recrutador'">
+                <i class="fa-solid fa-user-group"></i> <span>Demographics</span>
+            </li>
+            <li data-section="recommendation" class="active" onclick="setActive(this); location.href='/recrutador/recommendation'">
+                <i class="fa-solid fa-magnifying-glass"></i> <span>Recommendation</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <div class="main">
+
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="topbar-text">
+                <strong>Stack Overflow Developer Survey 2024</strong>
+                <span>Dashboard de Análise de Recrutadores</span>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i id="themeIcon" class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <header class="header">
+                <h2>Recommendation</h2>
+            </header>
+
+            <p class="rec-intro">
+                Compatibilidade entre candidatos e as tecnologias exigidas pela vaga.
+                O heatmap mostra quais os candidatos mais adequados com base no historial de tecnologias utilizadas.
+            </p>
+
+            <!-- Heatmap -->
+            <div class="heatmap-wrapper">
+                <iframe src="/assets/heatmap_recrutador.html"
+                        style="width:100%; height:500px; border:none; border-radius:12px;">
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>
